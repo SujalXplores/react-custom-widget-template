@@ -1,3 +1,15 @@
-## [Creating React “Widgets” that can be embedded on any website, by anyone](https://javascriptpros.com/creating-react-widgets-embedded-anywhere/)
+## Creating React “Widgets” that can be embedded on any website, by anyone
 
-This repo is used as a reference for the article mentioned above. 
+# Features:
+
+✅ Latest react v17.0.2 support
+✅ Generates single javascript file
+✅ ES6 support
+
+# To build widget
+
+Run `npm run build:widget` that generates javascript in docs file.
+
+# To run in dev environment
+
+Run `npm start`.
