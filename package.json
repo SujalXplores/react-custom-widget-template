@@ -1,0 +1,42 @@
+{
+  "name": "feedback-widget",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/SujalShah3234/react-widget-template",
+  "author": "Sujal Shah",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:widget": "parcel build src/index.js --no-source-maps --no-cache -d docs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "parcel-bundler": "^1.12.5",
+    "styled-components": "^5.3.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react-scripts": "4.0.3"
+  }
+}
