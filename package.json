@@ -2,12 +2,10 @@
   "name": "react-embedable-widget",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/SujalShah3234/react-widget-template",
   "author": "Sujal Shah",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-rating-stars-component": "^2.2.0"
+    "react-dom": "^17.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
