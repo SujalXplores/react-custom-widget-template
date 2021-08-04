@@ -6,7 +6,8 @@ const Container = styled.div`
   min-width: 30vw;
   min-height: 60vh;
   background: #ffffff;
-  ${(props) => (props.align ? props.align : 'right')}: 1rem;
+  ${(props) => (props.align ? props.align : 'right')}: 0;
+  margin: 0.5rem;
   border-radius: 5px;
   padding: 1rem 1rem;
   box-shadow: 0px 0px 15px grey;
@@ -29,13 +30,18 @@ const Iframe = styled.iframe`
   height: 50vh;
 `;
 
+const Span = styled.span`
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+`;
+
 export const InnerContainer = (props) => {
   return (
     <React.Fragment>
       <Container {...props}>
-        <span style={{ marginBottom: '10px' }}>
-          {props.label || 'Powered by Trivians'}
-        </span>
+        <Span>{props.label || 'Powered by Trivians'}</Span>
         <Iframe
           title="SujalShah"
           allowFullScreen

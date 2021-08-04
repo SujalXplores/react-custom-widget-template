@@ -41,7 +41,15 @@ export const Widget = (props) => {
     <React.Fragment>
       <Container {...props}>
         <Button {...props} onClick={toggleWidget}>
-          <Img src={props.logo} alt="logo" width="25px" height="25px" />
+          <Img
+            src={
+              props.logo ||
+              'https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png'
+            }
+            alt="logo"
+            width="25px"
+            height="25px"
+          />
         </Button>
       </Container>
       {isFormVisible && <InnerContainer {...props} />}

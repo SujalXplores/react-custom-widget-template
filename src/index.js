@@ -4,6 +4,8 @@ import App from './App';
 import { createGlobalStyle } from 'styled-components';
 
 export const UniversalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap');
+
   * {
     padding: 0;
     margin: 0;
@@ -29,6 +31,10 @@ export const UniversalStyle = createGlobalStyle`
     display: grid;
     place-items: center;
     height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 `;
 
@@ -38,7 +44,9 @@ export const UniversalStyle = createGlobalStyle`
  * after assigning id to the element, ReactDOM.render will take over everything.
  **/
 
-if (!window.init.disabled) {
+// TODO if init is not there it throws an error
+
+if (window.init && !window.init.disabled) {
   const el = document.createElement('div');
   el.id = 'widget__' + Math.random().toString(36).slice(2);
   document.body.appendChild(el);
