@@ -9,15 +9,32 @@
   <meta name="description" content="React embedable widget plugin by Sujal Shah" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>React Plugin</title>
+  <title>React widget</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <script>
+    /**
+     * ------------------------------------------------------
+     * Options                                  | Default
+     * ------------------------------------------------------
+     * align?: 'left | right'                   | 'right'
+     * button_color?: 'string'                  | 'black'
+     * label?: 'string'                         |
+     * link?: 'string'                          |
+     * logo?: url                               |
+     * disable?: boolean                        |
+     * ------------------------------------------------------
+    */
+
     window.init = {
-      id: 3,
-      user: 'demo'
+      label: 'Trivians',
+      align: 'right',
+      button_color: '#3f51b5',
+      logo: 'https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png',
+      link: 'http://127.0.0.1:5500/index.html',
+      disabled: false
     }
   </script>
 </body>

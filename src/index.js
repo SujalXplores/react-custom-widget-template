@@ -24,6 +24,12 @@ export const UniversalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ${(props) => props && '#' + props.widget} {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
 `;
 
 /**
@@ -32,14 +38,16 @@ export const UniversalStyle = createGlobalStyle`
  * after assigning id to the element, ReactDOM.render will take over everything.
  **/
 
-const el = document.createElement('div');
-el.id = 'feedback-widget__' + Math.random().toString(36).slice(-5);
-document.body.appendChild(el);
+if (!window.init.disabled) {
+  const el = document.createElement('div');
+  el.id = 'widget__' + Math.random().toString(36).slice(2);
+  document.body.appendChild(el);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <UniversalStyle />
-    <App />
-  </React.StrictMode>,
-  document.getElementById(el.id)
-);
+  ReactDOM.render(
+    <React.StrictMode>
+      <UniversalStyle widget={el.id} />
+      <App />
+    </React.StrictMode>,
+    document.getElementById(el.id)
+  );
+}
