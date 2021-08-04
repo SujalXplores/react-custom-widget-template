@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import { FloatingButton } from './custom-feedback/button/FloatingButton';
+import { Widget } from './Widget/Widget';
 
 const App = () => {
-  const [user] = useState(window.init);
-  console.log(user);
-  return (
-    <FloatingButton
-      label="Feedback"
-      icon="💌"
-      align="right"
-      font_color="white"
-      background_color="black"
-    />
-  );
+  const [config] = useState(window.init);
+
+  console.log(config);
+
+  return <Widget {...config} />;
 };
 
 export default App;
