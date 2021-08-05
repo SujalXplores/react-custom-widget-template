@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   opacity: 0;
+  width: 332px;
   min-width: 30vw;
   min-height: 60vh;
   background: #ffffff;
@@ -11,8 +12,6 @@ const Container = styled.div`
   border-radius: 5px;
   padding: 1rem 1rem;
   box-shadow: 0px 0px 15px grey;
-  display: flex;
-  flex-direction: column;
   animation: fadein 1s forwards;
 
   @keyframes fadein {
@@ -37,10 +36,22 @@ const Span = styled.span`
   font-weight: 500;
 `;
 
+const CloseButton = styled.span`
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  background: gray;
+  color: lightgray;
+  width: 20px;
+  text-align: center;
+`;
+
 export const InnerContainer = (props) => {
   return (
     <React.Fragment>
       <Container {...props}>
+        <CloseButton onClick={props.onClick}>X</CloseButton>
         <Span>{props.label || 'Powered by Trivians'}</Span>
         <Iframe
           title="SujalShah"

@@ -49,10 +49,11 @@ export const Widget = (props) => {
             alt="logo"
             width="25px"
             height="25px"
+            loading="eager"
           />
         </Button>
       </Container>
-      {isFormVisible && <InnerContainer {...props} />}
+      {isFormVisible && <InnerContainer {...props} onClick={toggleWidget} />}
     </React.Fragment>
   );
 };
